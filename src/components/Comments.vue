@@ -2,10 +2,11 @@
   <div class="container">
     <h1>Comments</h1>
     <hr />
-    
+
     <FormTodo v-on:add-todo="addComment" />
 
     <div class="list-group">
+      <p v-if="comments.length == 0">No comments are here yet ...</p>
       <div class="list-group-item" v-for="(comment, index) in allComments" v-bind:key="index">
         <span class="comment__author">
           Author:
@@ -21,7 +22,7 @@
 </template>
 
 <script>
-import FormTodo from "./FormTodo"
+import FormTodo from "./FormTodo";
 
 export default {
   // por baixo o compilador do Vue instancia esse objeto e da um new Vue
@@ -44,10 +45,10 @@ export default {
   },
   methods: {
     addComment(comment) {
-      this.comments.push(comment)
+      this.comments.push(comment);
     },
     removeComment(commentIndex) {
-      this.comments.splice(commentIndex, 1)
+      this.comments.splice(commentIndex, 1);
     }
   },
   computed: {
