@@ -1,4 +1,5 @@
-# comment_system
+# A simple Vue Boilerplate of a Comment System
+* Tutorial available in: https://www.youtube.com/watch?v=cSa-SMVMGsE
 
 ## Project setup
 ```
